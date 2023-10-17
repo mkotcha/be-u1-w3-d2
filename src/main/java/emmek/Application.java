@@ -30,6 +30,8 @@ public class Application {
             }
             System.out.println();
             eventDao.delete(eventDao.getById(32));
+        } catch (Exception ex) {
+            System.err.println(ex.getMessage());
         } finally {
             em.close();
             emf.close();
