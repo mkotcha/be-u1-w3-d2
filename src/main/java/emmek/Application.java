@@ -26,12 +26,14 @@ public class Application {
                         faker.options().option(EventType.class),
                         faker.number().numberBetween(10, 200));
                 eventDao.save(event);
+
             }
+            System.out.println();
+            eventDao.delete(eventDao.getById(32));
         } finally {
             em.close();
             emf.close();
         }
 
-        System.out.println("Hello World!");
     }
 }

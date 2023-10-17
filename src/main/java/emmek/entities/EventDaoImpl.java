@@ -17,7 +17,7 @@ public class EventDaoImpl implements EventDao {
         tx.begin();
         em.persist(event);
         tx.commit();
-        System.out.println("Event saved");
+        System.out.println("Event " + event.getTitle() + " saved");
     }
 
     @Override
@@ -31,7 +31,7 @@ public class EventDaoImpl implements EventDao {
         tx.begin();
         em.remove(event);
         tx.commit();
-        System.out.println("Event deleted");
+        System.out.println("Event " + event.getTitle() + " deleted");
     }
 
     @Override
